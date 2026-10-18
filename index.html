@@ -104,9 +104,40 @@ async function afficherTransactions() {
     zone.replaceChildren();
 
     transactions.slice().reverse().forEach(transaction => {
-      const ligne = document.createElement("p");
-      ligne.textContent = JSON.stringify(transaction);
-      zone.appendChild(ligne);
+      const carte = document.createElement("div");
+carte.style.cssText = `
+  background: #2a2042;
+  border: 1px solid #7652a8;
+  border-radius: 16px;
+  padding: 16px;
+  margin: 12px 0;
+  color: white;
+  text-align: left;
+`;
+
+const achat = transaction.action?.includes("ACHAT");
+const titre = document.createElement("h3");
+titre.textContent = `${achat ? "🟢" : "🩷"} ${transaction.symbole || "Crypto"} — ${transaction.action || "Transaction"}`;
+
+const details = document.createElement("p");
+const montant = Number(transaction.montant_cad || 0);
+const prix = Number(transaction.prix_cad || 0);
+const frais = Number(transaction.frais_cad || 0);
+
+details.textContent =
+  `💰 Montant : ${montant.toFixed(2)} $ CA
+  | 📊 Prix : ${prix.toLocaleString("fr-CA")} $ CA
+  | Frais : ${frais.toFixed(2)} $ CA`;
+
+const date = document.createElement("small");
+date.textContent = transaction.date_utc
+  ? new Date(transaction.date_utc).toLocaleString("fr-CA", {
+      timeZone: "America/Toronto"
+    })
+  : "";
+
+carte.append(titre, details, date);
+zone.appendChild(carte);
     });
   } catch (erreur) {
     zone.textContent = "Impossible de charger les transactions.";
