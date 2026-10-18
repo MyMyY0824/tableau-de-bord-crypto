@@ -369,7 +369,21 @@ const ventesSansProfit = transactions.some(
 
 afficherBilan();
 setInterval(afficherBilan, 30000);
-
+let periodeGraphique = "tout";
+function changerPeriode(periode) {
+  periodeGraphique = periode;
+  afficherGraphique();
+}
+function boutonsPeriodes() {
+  return `
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin:12px 0;">
+      <button onclick="changerPeriode('24h')">24 h</button>
+      <button onclick="changerPeriode('7j')">7 jours</button>
+      <button onclick="changerPeriode('30j')">30 jours</button>
+      <button onclick="changerPeriode('tout')">Tout</button>
+    </div>
+  `;
+}
 async function afficherGraphique() {
   let graphique = document.getElementById("graphique-capital");
 
@@ -385,7 +399,22 @@ async function afficherGraphique() {
     if (!reponse.ok) throw new Error("Historique indisponible");
 
     const historique = await reponse.json();
-    const valeurs = historique.map(p => Number(p.valeur_cad)).filter(Number.isFinite);
+    const maintenant = Date.now();
+
+const durees = {
+  "24h": 24 * 60 * 60 * 1000,
+  "7j": 7 * 24 * 60 * 60 * 1000,
+  "30j": 30 * 24 * 60 * 60 * 1000
+};
+
+const historiqueFiltre = historique.filter(p => {
+  if (periodeGraphique === "tout") return true;
+
+  const date = new Date(p.date).getTime();
+  return date >= maintenant - durees[periodeGraphique];
+});
+
+const valeurs = historiqueFiltre.map(p => Number(p.valeur_cad));
 
     if (!valeurs.length) throw new Error("Aucune donnée");
 
@@ -402,6 +431,7 @@ async function afficherGraphique() {
 
     graphique.innerHTML = `
       <h2>📈 Évolution du capital fictif</h2>
+          ${boutonsPeriodes()}
       <p>Valeur actuelle : ${valeurs[valeurs.length - 1].toFixed(2)} $ CA</p>
       <svg viewBox="0 0 320 160" style="width:100%;height:auto">
         <polyline points="${points}" fill="none" stroke="#a78bfa" stroke-width="3" stroke-linejoin="round"/>
