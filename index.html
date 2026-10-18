@@ -80,6 +80,42 @@ async function afficherGraphique() {
 afficherGraphique();
 setInterval(afficherGraphique, 30000);
 </script>
+<h2>📋 Historique des transactions</h2>
+<div id="transactions">Chargement des transactions...</div>
+
+<script>
+async function afficherTransactions() {
+  const zone = document.getElementById("transactions");
+
+  try {
+    const reponse = await fetch(
+      "./transactions.json?t=" + Date.now()
+    );
+
+    if (!reponse.ok) throw new Error("Fichier introuvable");
+
+    const transactions = await reponse.json();
+
+    if (!Array.isArray(transactions) || transactions.length === 0) {
+      zone.textContent = "Aucune transaction simulée pour le moment.";
+      return;
+    }
+
+    zone.replaceChildren();
+
+    transactions.slice().reverse().forEach(transaction => {
+      const ligne = document.createElement("p");
+      ligne.textContent = JSON.stringify(transaction);
+      zone.appendChild(ligne);
+    });
+  } catch (erreur) {
+    zone.textContent = "Impossible de charger les transactions.";
+  }
+}
+
+afficherTransactions();
+setInterval(afficherTransactions, 30000);
+</script>
 <body>
   <h1>Mon Bot Crypto</h1>
   <p>Tableau de bord de simulation</p>
