@@ -1,13 +1,21 @@
 {
-  "valeur_cad": 24.99,
+  "valeur_cad": 24.98,
   "positions": [
     {
       "symbole": "XBT/CAD",
       "quantite": 2.1513774863962096e-05,
-      "prix_actuel_cad": 115955.7,
-      "valeur_actuelle_cad": 2.4946,
-      "profit_cad": -0.0054,
-      "profit_pourcent": -0.21
+      "prix_actuel_cad": 115819.9,
+      "valeur_actuelle_cad": 2.4917,
+      "profit_cad": -0.0083,
+      "profit_pourcent": -0.33
+    },
+    {
+      "symbole": "XDG/CAD",
+      "quantite": 22.137445978852963,
+      "prix_actuel_cad": 0.1124791,
+      "valeur_actuelle_cad": 2.49,
+      "profit_cad": -0.01,
+      "profit_pourcent": -0.4
     }
   ]
 }
