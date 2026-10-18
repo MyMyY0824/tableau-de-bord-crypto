@@ -147,6 +147,9 @@ zone.appendChild(carte);
 afficherTransactions();
 setInterval(afficherTransactions, 30000);
 </script>
+<h2>📊 Bilan des performances</h2>
+<div id="bilan-performances">Chargement du bilan...</div>
+
 <h2>💰 Profits et pertes par crypto</h2>
 <div id="profits-cryptos">Chargement...</div>
 
@@ -276,6 +279,68 @@ async function actualiser() {
 actualiser();
 setInterval(actualiser, 30000);
 </script>
+<script>
+async function afficherBilan() {
+  const zone = document.getElementById("bilan-performances");
 
+  try {
+    const [repResultats, repTransactions] = await Promise.all([
+      fetch("./resultats.json?t=" + Date.now()),
+      fetch("./transactions.json?t=" + Date.now())
+    ]);
+
+    if (!repResultats.ok || !repTransactions.ok) {
+      throw new Error("Données indisponibles");
+    }
+
+    const donnees = await repResultats.json();
+    const transactions = await repTransactions.json();
+
+    const capitalInitial = 25;
+    const valeurTotale = Number(donnees.valeur_cad);
+    const resultatTotal = valeurTotale - capitalInitial;
+
+    const positions = donnees.positions || [];
+    const nonRealise = positions.reduce(
+      (total, pos) => total + Number(pos.profit_cad || 0), 0
+    );
+
+    const realise = resultatTotal - nonRealise;
+
+    const format = montant =>
+      (montant >= 0 ? "+" : "") + montant.toFixed(2) + " $ CA";
+
+    zone.replaceChildren();
+
+    [
+      ["💰 Résultat total", resultatTotal],
+      ["✅ Résultat réalisé estimé", realise],
+      ["📈 Résultat non réalisé", nonRealise]
+    ].forEach(([titre, montant]) => {
+      const carte = document.createElement("div");
+      carte.style.cssText =
+        "background:#2a2042;border:1px solid #7652a8;" +
+        "border-radius:16px;padding:16px;margin:12px 0;color:white;";
+
+      const nom = document.createElement("strong");
+      nom.textContent = titre;
+
+      const valeur = document.createElement("p");
+      valeur.textContent = format(montant);
+      valeur.style.color = montant >= 0 ? "#63e6a0" : "#ff809d";
+      valeur.style.fontWeight = "bold";
+
+      carte.append(nom, valeur);
+      zone.appendChild(carte);
+    });
+
+  } catch (erreur) {
+    zone.textContent = "Impossible de charger le bilan.";
+  }
+}
+
+afficherBilan();
+setInterval(afficherBilan, 30000);
+</script>
 </body>
 </html>
