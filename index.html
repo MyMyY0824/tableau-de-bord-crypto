@@ -308,7 +308,20 @@ async function afficherBilan() {
     const nonRealise = positions.reduce(
       (total, pos) => total + Number(pos.profit_cad || 0), 0
     );
-
+const coutsAchats = {};
+const profitsAnciens = [];
+transactions.forEach(t => {
+  if (t.action === "ACHAT FICTIF") {
+    coutsAchats[t.symbole] =
+      (coutsAchats[t.symbole] || 0) + Number(t.montant_cad);
+  } else if (t.action === "VENTE FICTIVE") {
+    const cout = coutsAchats[t.symbole];
+    if (cout !== undefined) {
+      profitsAnciens.push(Number(t.montant_cad) - cout);
+    }
+    coutsAchats[t.symbole] = 0;
+  }
+});
     const realise = transactions
   .filter(t => t.action === "VENTE FICTIVE")
   .reduce((total, t) => {
