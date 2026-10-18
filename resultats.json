@@ -5,7 +5,9 @@
       "symbole": "XBT/CAD",
       "quantite": 2.1513774863962096e-05,
       "prix_actuel_cad": 115739.8,
-      "valeur_actuelle_cad": 2.49
+      "valeur_actuelle_cad": 2.49,
+      "profit_cad": -0.01,
+      "profit_pourcent": -0.4
     }
   ]
 }
