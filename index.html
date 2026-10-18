@@ -374,13 +374,20 @@ function changerPeriode(periode) {
   periodeGraphique = periode;
   afficherGraphique();
 }
+function styleBouton(periode) {
+  const actif = periodeGraphique === periode;
+
+  return actif
+    ? "background:#a78bfa;color:#1a102e;"
+    : "background:#eeeeee;color:#222222;";
+}
 function boutonsPeriodes() {
   return `
     <div style="display:flex;gap:8px;flex-wrap:wrap;margin:12px 0;">
-      <button onclick="changerPeriode('24h')">24 h</button>
-      <button onclick="changerPeriode('7j')">7 jours</button>
-      <button onclick="changerPeriode('30j')">30 jours</button>
-      <button onclick="changerPeriode('tout')">Tout</button>
+      <button style="${styleBouton('24h')}" onclick="changerPeriode('24h')">24 h</button>
+      <button style="${styleBouton('7j')}" onclick="changerPeriode('7j')">7 jours</button>
+      <button style="${styleBouton('30j')}" onclick="changerPeriode('30j')">30 jours</button>
+      <button style="${styleBouton('tout')}" onclick="changerPeriode('tout')">Tout</button>
     </div>
   `;
 }
