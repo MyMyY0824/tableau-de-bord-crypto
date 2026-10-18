@@ -422,8 +422,14 @@ const historiqueFiltre = historique.filter(p => {
 });
 
 const valeurs = historiqueFiltre.map(p => Number(p.valeur_cad));
-
-    if (!valeurs.length) throw new Error("Aucune donnée");
+if (!valeurs.length) throw new Error("Aucune donnée");
+const valeurDebut = valeurs[0];
+const valeurFin = valeurs[valeurs.length - 1];
+const gainPerte = valeurFin - valeurDebut;
+const pourcentage = valeurDebut !== 0
+  ? (gainPerte / valeurDebut) * 100
+  : 0;
+    
 
     const minimum = Math.min(...valeurs) - 0.01;
     const maximum = Math.max(...valeurs) + 0.01;
@@ -440,6 +446,10 @@ const valeurs = historiqueFiltre.map(p => Number(p.valeur_cad));
       <h2>📈 Évolution du capital fictif</h2>
           ${boutonsPeriodes()}
       <p>Valeur actuelle : ${valeurs[valeurs.length - 1].toFixed(2)} $ CA</p>
+      <p style="color:${gainPerte >= 0 ? '#5ce0a0' : '#ff7b93'};font-weight:bold;">
+  ${gainPerte >= 0 ? '+' : ''}${gainPerte.toFixed(2)} $ CA
+  (${pourcentage >= 0 ? '+' : ''}${pourcentage.toFixed(2)} %)
+</p>
       <svg viewBox="0 0 320 160" style="width:100%;height:auto">
         <polyline points="${points}" fill="none" stroke="#a78bfa" stroke-width="3" stroke-linejoin="round"/>
       </svg>
