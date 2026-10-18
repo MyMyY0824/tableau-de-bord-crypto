@@ -164,7 +164,9 @@ async function afficherProfits() {
     if (!reponse.ok) throw new Error("Fichier introuvable");
 
     const donnees = await reponse.json();
-    const positions = donnees.positions || [];
+    const positions = (donnees.positions || []).filter(
+  pos => Number(pos.quantite) > 0
+);
 
     zone.replaceChildren();
 
@@ -300,13 +302,24 @@ async function afficherBilan() {
     const valeurTotale = Number(donnees.valeur_cad);
     const resultatTotal = valeurTotale - capitalInitial;
 
-    const positions = donnees.positions || [];
+    const positions = (donnees.positions || []).filter(
+  pos => Number(pos.quantite) > 0
+);
     const nonRealise = positions.reduce(
       (total, pos) => total + Number(pos.profit_cad || 0), 0
     );
 
-    const realise = resultatTotal - nonRealise;
-
+    const realise = transactions
+  .filter(t => t.action === "VENTE FICTIVE")
+  .reduce((total, t) => {
+    if (t.profit_vente_cad != null) {
+      return total + Number(t.profit_vente_cad);
+    }
+    return total;
+  }, 0);
+const ventesSansProfit = transactions.some(
+  t => t.action === "VENTE FICTIVE" && t.profit_vente_cad == null
+);
     const format = montant =>
       (montant >= 0 ? "+" : "") + montant.toFixed(2) + " $ CA";
 
@@ -314,7 +327,7 @@ async function afficherBilan() {
 
     [
       ["💰 Résultat total", resultatTotal],
-      ["✅ Résultat réalisé estimé", realise],
+      ["✅ Résultat réalisé", ventesSansProfit ? null : realise],
       ["📈 Résultat non réalisé", nonRealise]
     ].forEach(([titre, montant]) => {
       const carte = document.createElement("div");
@@ -326,8 +339,10 @@ async function afficherBilan() {
       nom.textContent = titre;
 
       const valeur = document.createElement("p");
-      valeur.textContent = format(montant);
-      valeur.style.color = montant >= 0 ? "#63e6a0" : "#ff809d";
+      valeur.textContent = montant === null
+  ? "Historique incomplet"
+  : format(montant);
+      valeur.style.color = montant === null ? "#ffcc80" : (montant >= 0 ? "#63e6a0" : "#ff809d");
       valeur.style.fontWeight = "bold";
 
       carte.append(nom, valeur);
