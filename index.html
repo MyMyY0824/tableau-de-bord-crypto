@@ -34,12 +34,12 @@
 
   <div class="carte">
     <p>Capital fictif initial</p>
-    <div class="montant">25,00 $ CAD</div>
+    <div class="montant" id="valeur">25,00 $ CAD</div>
   </div>
 
   <div class="carte">
     <h2>Performance</h2>
-    <p class="montant vert">+0,00 $</p>
+    <p class="montant vert" id="performance">+0,00 $</p>
     <p class="petit">Aucune transaction simulee</p>
   </div>
 
@@ -65,5 +65,29 @@
     Donnees de demonstration uniquement.
     Aucun argent reel utilise.
   </p>
+  
+<script>
+async function actualiser() {
+  try {
+    const reponse = await fetch(
+      "./resultats.json?t=" + Date.now()
+    );
+    if (!reponse.ok) return;
+
+    const donnees = await reponse.json();
+
+    document.querySelector("#valeur").textContent =
+      Number(donnees.valeur_cad).toFixed(2) + " $ CAD";
+
+    document.querySelector("#performance").textContent =
+      (donnees.valeur_cad - 25).toFixed(2) + " $ CAD";
+  } catch (erreur) {
+    console.log("Données non disponibles");
+  }
+}
+actualiser();
+setInterval(actualiser, 30000);
+</script>
+
 </body>
 </html>
