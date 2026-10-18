@@ -369,6 +369,53 @@ const ventesSansProfit = transactions.some(
 
 afficherBilan();
 setInterval(afficherBilan, 30000);
+
+async function afficherGraphique() {
+  let graphique = document.getElementById("graphique-capital");
+
+  if (!graphique) {
+    graphique = document.createElement("section");
+    graphique.id = "graphique-capital";
+    graphique.style.cssText = "margin:24px 16px;padding:20px;background:#2a2042;border:1px solid #7655a0;border-radius:16px;color:white;";
+    document.body.appendChild(graphique);
+  }
+
+  try {
+    const reponse = await fetch("./historique.json?t=" + Date.now());
+    if (!reponse.ok) throw new Error("Historique indisponible");
+
+    const historique = await reponse.json();
+    const valeurs = historique.map(p => Number(p.valeur_cad)).filter(Number.isFinite);
+
+    if (!valeurs.length) throw new Error("Aucune donnée");
+
+    const minimum = Math.min(...valeurs) - 0.01;
+    const maximum = Math.max(...valeurs) + 0.01;
+    const largeur = 320;
+    const hauteur = 160;
+
+    const points = valeurs.map((v, i) => {
+      const x = valeurs.length === 1 ? largeur / 2 : i * largeur / (valeurs.length - 1);
+      const y = hauteur - (v - minimum) / (maximum - minimum) * hauteur;
+      return `${x},${y}`;
+    }).join(" ");
+
+    graphique.innerHTML = `
+      <h2>📈 Évolution du capital fictif</h2>
+      <p>Valeur actuelle : ${valeurs[valeurs.length - 1].toFixed(2)} $ CA</p>
+      <svg viewBox="0 0 320 160" style="width:100%;height:auto">
+        <polyline points="${points}" fill="none" stroke="#a78bfa" stroke-width="3" stroke-linejoin="round"/>
+      </svg>
+      <p style="font-size:12px;color:#bbb">Simulation uniquement — aucun argent réel</p>
+    `;
+  } catch (erreur) {
+    graphique.textContent = "📈 Le graphique sera disponible lorsque l'historique sera chargé.";
+  }
+}
+
+afficherGraphique();
+setInterval(afficherGraphique, 30000);
+
 </script>
 </body>
 </html>
