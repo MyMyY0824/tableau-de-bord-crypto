@@ -340,7 +340,7 @@ const ventesSansProfit = transactions.some(
 
     [
       ["💰 Résultat total", resultatTotal],
-      ["✅ Résultat réalisé", ventesSansProfit ? null : realise],
+      ["✅ Résultat réalisé", ventesSansProfit ? null : realise + profitsAnciens.reduce((a, b) => a + b, 0)],
       ["📈 Résultat non réalisé", nonRealise]
     ].forEach(([titre, montant]) => {
       const carte = document.createElement("div");
