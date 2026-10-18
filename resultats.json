@@ -1,3 +1,11 @@
 {
-  "valeur_cad": 24.99
+  "valeur_cad": 24.99,
+  "positions": [
+    {
+      "symbole": "XBT/CAD",
+      "quantite": 2.1513774863962096e-05,
+      "prix_actuel_cad": 115739.8,
+      "valeur_actuelle_cad": 2.49
+    }
+  ]
 }
