@@ -28,6 +28,58 @@
     .petit { color: #aeb8d0; }
   </style>
 </head>
+<h2>📈 Évolution de mon portefeuille</h2>
+<canvas id="graphique" width="350" height="200"></canvas>
+<script>
+async function afficherGraphique() {
+  try {
+    const reponse = await fetch(
+      "./historique.json?t=" + Date.now()
+    );
+    if (!reponse.ok) return;
+
+    const historique = await reponse.json();
+    if (!Array.isArray(historique) || historique.length === 0) return;
+
+    const canvas = document.getElementById("graphique");
+    const ctx = canvas.getContext("2d");
+    const valeurs = historique.map(point => Number(point.valeur_cad))
+      .filter(Number.isFinite);
+
+    if (valeurs.length === 0) return;
+
+    const largeur = canvas.width;
+    const hauteur = canvas.height;
+    const marge = 25;
+    const minimum = Math.min(...valeurs);
+    const maximum = Math.max(...valeurs);
+    const amplitude = maximum - minimum || 1;
+
+    ctx.clearRect(0, 0, largeur, hauteur);
+    ctx.strokeStyle = "#b16cff";
+    ctx.lineWidth = 3;
+    ctx.beginPath();
+
+    valeurs.forEach((valeur, i) => {
+      const x = marge + (i / Math.max(valeurs.length - 1, 1))
+        * (largeur - 2 * marge);
+      const y = hauteur - marge
+        - ((valeur - minimum) / amplitude)
+        * (hauteur - 2 * marge);
+
+      if (i === 0) ctx.moveTo(x, y);
+      else ctx.lineTo(x, y);
+    });
+
+    ctx.stroke();
+  } catch (erreur) {
+    console.log("Graphique indisponible :", erreur);
+  }
+}
+
+afficherGraphique();
+setInterval(afficherGraphique, 30000);
+</script>
 <body>
   <h1>Mon Bot Crypto</h1>
   <p>Tableau de bord de simulation</p>
