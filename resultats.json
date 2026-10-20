@@ -1,13 +1,13 @@
 {
-  "valeur_cad": 24.71,
+  "valeur_cad": 24.75,
   "positions": [
     {
       "symbole": "XBT/CAD",
-      "quantite": 0.0,
-      "prix_actuel_cad": 116332.8,
-      "valeur_actuelle_cad": 0.0,
-      "profit_cad": -2.5,
-      "profit_pourcent": -100.0
+      "quantite": 2.1475292201967795e-05,
+      "prix_actuel_cad": 115947.2,
+      "valeur_actuelle_cad": 2.49,
+      "profit_cad": -0.01,
+      "profit_pourcent": -0.4
     },
     {
       "symbole": "XDG/CAD",
@@ -28,34 +28,34 @@
     {
       "symbole": "PEPE/CAD",
       "quantite": 434100.4184100419,
-      "prix_actuel_cad": 6.253e-06,
-      "valeur_actuelle_cad": 2.7144,
-      "profit_cad": 0.2144,
-      "profit_pourcent": 8.58
+      "prix_actuel_cad": 6.461e-06,
+      "valeur_actuelle_cad": 2.8047,
+      "profit_cad": 0.3047,
+      "profit_pourcent": 12.19
     },
     {
       "symbole": "SOL/CAD",
       "quantite": 0.01663548904329236,
-      "prix_actuel_cad": 149.95,
-      "valeur_actuelle_cad": 2.4945,
-      "profit_cad": -0.0055,
-      "profit_pourcent": -0.22
+      "prix_actuel_cad": 148.84,
+      "valeur_actuelle_cad": 2.476,
+      "profit_cad": -0.024,
+      "profit_pourcent": -0.96
     },
     {
       "symbole": "XRP/CAD",
       "quantite": 1.3352495146984698,
-      "prix_actuel_cad": 1.86482,
-      "valeur_actuelle_cad": 2.49,
-      "profit_cad": -0.01,
-      "profit_pourcent": -0.4
+      "prix_actuel_cad": 1.86063,
+      "valeur_actuelle_cad": 2.4844,
+      "profit_cad": -0.0156,
+      "profit_pourcent": -0.62
     },
     {
       "symbole": "ETH/CAD",
       "quantite": 0.0007230259069764741,
-      "prix_actuel_cad": 3443.86,
-      "valeur_actuelle_cad": 2.49,
-      "profit_cad": -0.01,
-      "profit_pourcent": -0.4
+      "prix_actuel_cad": 3423.12,
+      "valeur_actuelle_cad": 2.475,
+      "profit_cad": -0.025,
+      "profit_pourcent": -1.0
     }
   ]
 }
