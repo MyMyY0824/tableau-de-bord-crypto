@@ -294,5 +294,15 @@
     "montant_cad": 2.512636,
     "frais_cad": 0.010091,
     "profit_vente_cad": 0.0126
+  },
+  {
+    "date_utc": "2026-10-22T10:27:55.136668+00:00",
+    "symbole": "PEPE/CAD",
+    "signal": "VENDRE",
+    "action": "VENTE FICTIVE",
+    "prix_cad": 6.38e-06,
+    "montant_cad": 2.758482,
+    "frais_cad": 0.011078,
+    "profit_vente_cad": 0.2585
   }
 ]
