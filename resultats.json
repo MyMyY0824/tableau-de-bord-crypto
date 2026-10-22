@@ -1,29 +1,29 @@
 {
-  "valeur_cad": 25.2,
+  "valeur_cad": 25.04,
   "positions": [
     {
       "symbole": "XBT/CAD",
       "quantite": 2.1475292201967795e-05,
-      "prix_actuel_cad": 118230.4,
-      "valeur_actuelle_cad": 2.539,
-      "profit_cad": 0.039,
-      "profit_pourcent": 1.56
+      "prix_actuel_cad": 117150.0,
+      "valeur_actuelle_cad": 2.5158,
+      "profit_cad": 0.0158,
+      "profit_pourcent": 0.63
     },
     {
       "symbole": "XDG/CAD",
       "quantite": 22.17407449954717,
-      "prix_actuel_cad": 0.1162329,
-      "valeur_actuelle_cad": 2.5774,
-      "profit_cad": 0.0774,
-      "profit_pourcent": 3.09
+      "prix_actuel_cad": 0.114,
+      "valeur_actuelle_cad": 2.5278,
+      "profit_cad": 0.0278,
+      "profit_pourcent": 1.11
     },
     {
       "symbole": "XDC/CAD",
       "quantite": 54.557405784399656,
-      "prix_actuel_cad": 0.04906,
-      "valeur_actuelle_cad": 2.6766,
-      "profit_cad": 0.1766,
-      "profit_pourcent": 7.06
+      "prix_actuel_cad": 0.04885,
+      "valeur_actuelle_cad": 2.6651,
+      "profit_cad": 0.1651,
+      "profit_pourcent": 6.61
     },
     {
       "symbole": "PEPE/CAD",
@@ -36,26 +36,26 @@
     {
       "symbole": "SOL/CAD",
       "quantite": 0.01663548904329236,
-      "prix_actuel_cad": 150.71,
-      "valeur_actuelle_cad": 2.5071,
-      "profit_cad": 0.0071,
-      "profit_pourcent": 0.29
+      "prix_actuel_cad": 149.44,
+      "valeur_actuelle_cad": 2.486,
+      "profit_cad": -0.014,
+      "profit_pourcent": -0.56
     },
     {
       "symbole": "XRP/CAD",
       "quantite": 1.3352495146984698,
-      "prix_actuel_cad": 1.91871,
-      "valeur_actuelle_cad": 2.562,
-      "profit_cad": 0.062,
-      "profit_pourcent": 2.48
+      "prix_actuel_cad": 1.89568,
+      "valeur_actuelle_cad": 2.5312,
+      "profit_cad": 0.0312,
+      "profit_pourcent": 1.25
     },
     {
       "symbole": "ETH/CAD",
       "quantite": 0.0007230259069764741,
-      "prix_actuel_cad": 3473.5,
-      "valeur_actuelle_cad": 2.5114,
-      "profit_cad": 0.0114,
-      "profit_pourcent": 0.46
+      "prix_actuel_cad": 3445.26,
+      "valeur_actuelle_cad": 2.491,
+      "profit_cad": -0.009,
+      "profit_pourcent": -0.36
     }
   ]
 }
