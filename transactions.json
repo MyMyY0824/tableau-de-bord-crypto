@@ -254,5 +254,25 @@
     "montant_cad": 2.45237,
     "frais_cad": 0.009849,
     "profit_vente_cad": -0.0476
+  },
+  {
+    "date_utc": "2026-10-22T06:03:45.807562+00:00",
+    "symbole": "ETH/CAD",
+    "signal": "VENDRE",
+    "action": "VENTE FICTIVE",
+    "prix_cad": 3410.28,
+    "montant_cad": 2.455858,
+    "frais_cad": 0.009863,
+    "profit_vente_cad": -0.0441
+  },
+  {
+    "date_utc": "2026-10-22T06:03:47.645545+00:00",
+    "symbole": "XDG/CAD",
+    "signal": "VENDRE",
+    "action": "VENTE FICTIVE",
+    "prix_cad": 0.113424,
+    "montant_cad": 2.505012,
+    "frais_cad": 0.01006,
+    "profit_vente_cad": 0.005
   }
 ]
