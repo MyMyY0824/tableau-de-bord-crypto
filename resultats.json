@@ -1,13 +1,13 @@
 {
-  "valeur_cad": 24.11,
+  "valeur_cad": 24.13,
   "positions": [
     {
       "symbole": "XBT/CAD",
       "quantite": 2.1982814559509423e-05,
-      "prix_actuel_cad": 112629.9,
-      "valeur_actuelle_cad": 2.4759,
-      "profit_cad": -0.0241,
-      "profit_pourcent": -0.96
+      "prix_actuel_cad": 112903.4,
+      "valeur_actuelle_cad": 2.4819,
+      "profit_cad": -0.0181,
+      "profit_pourcent": -0.72
     },
     {
       "symbole": "XDG/CAD",
@@ -20,7 +20,7 @@
     {
       "symbole": "XDC/CAD",
       "quantite": 0.0,
-      "prix_actuel_cad": 0.04581,
+      "prix_actuel_cad": 0.04505,
       "valeur_actuelle_cad": 0.0,
       "profit_cad": -2.5,
       "profit_pourcent": -100.0
@@ -28,7 +28,7 @@
     {
       "symbole": "PEPE/CAD",
       "quantite": 0.0,
-      "prix_actuel_cad": 6.368e-06,
+      "prix_actuel_cad": 6.185e-06,
       "valeur_actuelle_cad": 0.0,
       "profit_cad": -2.5,
       "profit_pourcent": -100.0
@@ -36,26 +36,26 @@
     {
       "symbole": "SOL/CAD",
       "quantite": 0.017368861607142856,
-      "prix_actuel_cad": 141.84,
-      "valeur_actuelle_cad": 2.4636,
-      "profit_cad": -0.0364,
-      "profit_pourcent": -1.46
+      "prix_actuel_cad": 142.3,
+      "valeur_actuelle_cad": 2.4716,
+      "profit_cad": -0.0284,
+      "profit_pourcent": -1.14
     },
     {
       "symbole": "XRP/CAD",
       "quantite": 1.3628377675732184,
-      "prix_actuel_cad": 1.81317,
-      "valeur_actuelle_cad": 2.4711,
-      "profit_cad": -0.0289,
-      "profit_pourcent": -1.16
+      "prix_actuel_cad": 1.8231,
+      "valeur_actuelle_cad": 2.4846,
+      "profit_cad": -0.0154,
+      "profit_pourcent": -0.62
     },
     {
       "symbole": "ETH/CAD",
-      "quantite": 0.0,
-      "prix_actuel_cad": 3275.0,
-      "valeur_actuelle_cad": 0.0,
-      "profit_cad": -2.5,
-      "profit_pourcent": -100.0
+      "quantite": 0.0007586074526327335,
+      "prix_actuel_cad": 3282.33,
+      "valeur_actuelle_cad": 2.49,
+      "profit_cad": -0.01,
+      "profit_pourcent": -0.4
     }
   ]
 }
