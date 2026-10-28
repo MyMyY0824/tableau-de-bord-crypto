@@ -744,5 +744,15 @@
     "montant_cad": 2.518341,
     "frais_cad": 0.010114,
     "profit_vente_cad": 0.0183
+  },
+  {
+    "date_utc": "2026-10-28T19:26:21.310714+00:00",
+    "symbole": "ETH/CAD",
+    "signal": "VENDRE",
+    "action": "VENTE FICTIVE",
+    "prix_cad": 3297.82,
+    "montant_cad": 2.479769,
+    "frais_cad": 0.009959,
+    "profit_vente_cad": -0.0202
   }
 ]
