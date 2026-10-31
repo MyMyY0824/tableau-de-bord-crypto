@@ -844,5 +844,25 @@
     "montant_cad": 2.393913,
     "frais_cad": 0.009614,
     "profit_vente_cad": -0.1061
+  },
+  {
+    "date_utc": "2026-10-31T00:09:10.362213+00:00",
+    "symbole": "XRP/CAD",
+    "signal": "ACHETER",
+    "action": "ACHAT FICTIF",
+    "prix_cad": 1.755,
+    "montant_cad": 2.5,
+    "frais_cad": 0.01,
+    "profit_vente_cad": null
+  },
+  {
+    "date_utc": "2026-10-31T00:09:11.431982+00:00",
+    "symbole": "XDG/CAD",
+    "signal": "ACHETER",
+    "action": "ACHAT FICTIF",
+    "prix_cad": 0.1046545,
+    "montant_cad": 2.5,
+    "frais_cad": 0.01,
+    "profit_vente_cad": null
   }
 ]
