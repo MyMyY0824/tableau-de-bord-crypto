@@ -874,5 +874,25 @@
     "montant_cad": 2.5,
     "frais_cad": 0.01,
     "profit_vente_cad": null
+  },
+  {
+    "date_utc": "2026-10-31T05:21:37.394836+00:00",
+    "symbole": "SOL/CAD",
+    "signal": "ACHETER",
+    "action": "ACHAT FICTIF",
+    "prix_cad": 133.65,
+    "montant_cad": 2.5,
+    "frais_cad": 0.01,
+    "profit_vente_cad": null
+  },
+  {
+    "date_utc": "2026-10-31T05:21:38.427402+00:00",
+    "symbole": "PEPE/CAD",
+    "signal": "VENDRE",
+    "action": "VENTE FICTIVE",
+    "prix_cad": 6.6e-06,
+    "montant_cad": 2.160827,
+    "frais_cad": 0.008678,
+    "profit_vente_cad": -0.3392
   }
 ]
