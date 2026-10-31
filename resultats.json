@@ -1,10 +1,10 @@
 {
-  "valeur_cad": 23.42,
+  "valeur_cad": 23.53,
   "positions": [
     {
       "symbole": "XBT/CAD",
       "quantite": 0.0,
-      "prix_actuel_cad": 108003.6,
+      "prix_actuel_cad": 108321.3,
       "valeur_actuelle_cad": 0.0,
       "profit_cad": -2.5,
       "profit_pourcent": -100.0
@@ -12,15 +12,15 @@
     {
       "symbole": "XDG/CAD",
       "quantite": 23.792574614565073,
-      "prix_actuel_cad": 0.1046545,
-      "valeur_actuelle_cad": 2.49,
-      "profit_cad": -0.01,
-      "profit_pourcent": -0.4
+      "prix_actuel_cad": 0.1064581,
+      "valeur_actuelle_cad": 2.5329,
+      "profit_cad": 0.0329,
+      "profit_pourcent": 1.32
     },
     {
       "symbole": "XDC/CAD",
       "quantite": 0.0,
-      "prix_actuel_cad": 0.04348,
+      "prix_actuel_cad": 0.04403,
       "valeur_actuelle_cad": 0.0,
       "profit_cad": -2.5,
       "profit_pourcent": -100.0
@@ -28,15 +28,15 @@
     {
       "symbole": "PEPE/CAD",
       "quantite": 328712.8712871287,
-      "prix_actuel_cad": 6.693e-06,
-      "valeur_actuelle_cad": 2.2001,
-      "profit_cad": -0.2999,
-      "profit_pourcent": -12.0
+      "prix_actuel_cad": 6.9e-06,
+      "valeur_actuelle_cad": 2.2681,
+      "profit_cad": -0.2319,
+      "profit_pourcent": -9.28
     },
     {
       "symbole": "SOL/CAD",
       "quantite": 0.0,
-      "prix_actuel_cad": 134.71,
+      "prix_actuel_cad": 135.12,
       "valeur_actuelle_cad": 0.0,
       "profit_cad": -2.5,
       "profit_pourcent": -100.0
@@ -44,15 +44,15 @@
     {
       "symbole": "XRP/CAD",
       "quantite": 1.418803418803419,
-      "prix_actuel_cad": 1.755,
-      "valeur_actuelle_cad": 2.49,
-      "profit_cad": -0.01,
-      "profit_pourcent": -0.4
+      "prix_actuel_cad": 1.75885,
+      "valeur_actuelle_cad": 2.4955,
+      "profit_cad": -0.0045,
+      "profit_pourcent": -0.18
     },
     {
       "symbole": "ETH/CAD",
       "quantite": 0.0,
-      "prix_actuel_cad": 3139.44,
+      "prix_actuel_cad": 3141.85,
       "valeur_actuelle_cad": 0.0,
       "profit_cad": -2.5,
       "profit_pourcent": -100.0
