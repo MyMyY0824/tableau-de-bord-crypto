@@ -914,5 +914,15 @@
     "montant_cad": 2.467972,
     "frais_cad": 0.009912,
     "profit_vente_cad": -0.032
+  },
+  {
+    "date_utc": "2026-10-31T16:11:42.435886+00:00",
+    "symbole": "XRP/CAD",
+    "signal": "ACHETER",
+    "action": "ACHAT FICTIF",
+    "prix_cad": 1.75112,
+    "montant_cad": 2.5,
+    "frais_cad": 0.01,
+    "profit_vente_cad": null
   }
 ]
