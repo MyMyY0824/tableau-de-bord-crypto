@@ -1084,5 +1084,15 @@
     "montant_cad": 2.471928,
     "frais_cad": 0.009927,
     "profit_vente_cad": -0.0281
+  },
+  {
+    "date_utc": "2026-11-02T14:37:35.512127+00:00",
+    "symbole": "XBT/CAD",
+    "signal": "VENDRE",
+    "action": "VENTE FICTIVE",
+    "prix_cad": 108910.9,
+    "montant_cad": 2.496535,
+    "frais_cad": 0.010026,
+    "profit_vente_cad": -0.0035
   }
 ]
