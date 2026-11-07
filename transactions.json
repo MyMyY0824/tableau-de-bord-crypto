@@ -1424,5 +1424,15 @@
     "montant_cad": 2.484773,
     "frais_cad": 0.009979,
     "profit_vente_cad": -0.0152
+  },
+  {
+    "date_utc": "2026-11-07T15:20:59.665371+00:00",
+    "symbole": "SOL/CAD",
+    "signal": "VENDRE",
+    "action": "VENTE FICTIVE",
+    "prix_cad": 127.06,
+    "montant_cad": 2.485909,
+    "frais_cad": 0.009984,
+    "profit_vente_cad": -0.0141
   }
 ]
