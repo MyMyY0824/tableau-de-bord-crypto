@@ -1,26 +1,26 @@
 {
-  "valeur_cad": 20.94,
+  "valeur_cad": 20.98,
   "positions": [
     {
       "symbole": "XBT/CAD",
       "quantite": 2.351952167527003e-05,
-      "prix_actuel_cad": 105243.3,
-      "valeur_actuelle_cad": 2.4753,
-      "profit_cad": -0.0247,
-      "profit_pourcent": -0.99
+      "prix_actuel_cad": 105029.4,
+      "valeur_actuelle_cad": 2.4702,
+      "profit_cad": -0.0298,
+      "profit_pourcent": -1.19
     },
     {
       "symbole": "XDG/CAD",
       "quantite": 25.094811017932212,
-      "prix_actuel_cad": 0.0992843,
-      "valeur_actuelle_cad": 2.4915,
-      "profit_cad": -0.0085,
-      "profit_pourcent": -0.34
+      "prix_actuel_cad": 0.0987747,
+      "valeur_actuelle_cad": 2.4787,
+      "profit_cad": -0.0213,
+      "profit_pourcent": -0.85
     },
     {
       "symbole": "XDC/CAD",
       "quantite": 0.0,
-      "prix_actuel_cad": 0.04438,
+      "prix_actuel_cad": 0.0439,
       "valeur_actuelle_cad": 0.0,
       "profit_cad": -2.5,
       "profit_pourcent": -100.0
@@ -28,15 +28,15 @@
     {
       "symbole": "PEPE/CAD",
       "quantite": 335669.99191156647,
-      "prix_actuel_cad": 7.322e-06,
-      "valeur_actuelle_cad": 2.4578,
-      "profit_cad": -0.0422,
-      "profit_pourcent": -1.69
+      "prix_actuel_cad": 7.479e-06,
+      "valeur_actuelle_cad": 2.5105,
+      "profit_cad": 0.0105,
+      "profit_pourcent": 0.42
     },
     {
       "symbole": "SOL/CAD",
       "quantite": 0.0,
-      "prix_actuel_cad": 121.01,
+      "prix_actuel_cad": 120.52,
       "valeur_actuelle_cad": 0.0,
       "profit_cad": -2.5,
       "profit_pourcent": -100.0
@@ -44,7 +44,7 @@
     {
       "symbole": "XRP/CAD",
       "quantite": 0.0,
-      "prix_actuel_cad": 1.53551,
+      "prix_actuel_cad": 1.5352,
       "valeur_actuelle_cad": 0.0,
       "profit_cad": -2.5,
       "profit_pourcent": -100.0
@@ -52,7 +52,7 @@
     {
       "symbole": "ETH/CAD",
       "quantite": 0.0,
-      "prix_actuel_cad": 2980.26,
+      "prix_actuel_cad": 2965.1,
       "valeur_actuelle_cad": 0.0,
       "profit_cad": -2.5,
       "profit_pourcent": -100.0
