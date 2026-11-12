@@ -1804,5 +1804,15 @@
     "montant_cad": 2.5,
     "frais_cad": 0.01,
     "profit_vente_cad": null
+  },
+  {
+    "date_utc": "2026-11-12T22:26:37.258931+00:00",
+    "symbole": "XDC/CAD",
+    "signal": "VENDRE",
+    "action": "VENTE FICTIVE",
+    "prix_cad": 0.04196,
+    "montant_cad": 2.396097,
+    "frais_cad": 0.009623,
+    "profit_vente_cad": -0.1039
   }
 ]
