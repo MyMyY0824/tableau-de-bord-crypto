@@ -1,13 +1,13 @@
 {
-  "valeur_cad": 20.68,
+  "valeur_cad": 20.72,
   "positions": [
     {
       "symbole": "XBT/CAD",
       "quantite": 2.366342062823056e-05,
-      "prix_actuel_cad": 105478.9,
-      "valeur_actuelle_cad": 2.496,
-      "profit_cad": -0.004,
-      "profit_pourcent": -0.16
+      "prix_actuel_cad": 105462.4,
+      "valeur_actuelle_cad": 2.4956,
+      "profit_cad": -0.0044,
+      "profit_pourcent": -0.18
     },
     {
       "symbole": "XDG/CAD",
@@ -20,7 +20,7 @@
     {
       "symbole": "XDC/CAD",
       "quantite": 0.0,
-      "prix_actuel_cad": 0.04132,
+      "prix_actuel_cad": 0.04118,
       "valeur_actuelle_cad": 0.0,
       "profit_cad": -2.5,
       "profit_pourcent": -100.0
@@ -28,7 +28,7 @@
     {
       "symbole": "PEPE/CAD",
       "quantite": 0.0,
-      "prix_actuel_cad": 6.367e-06,
+      "prix_actuel_cad": 6.432e-06,
       "valeur_actuelle_cad": 0.0,
       "profit_cad": -2.5,
       "profit_pourcent": -100.0
@@ -36,26 +36,26 @@
     {
       "symbole": "SOL/CAD",
       "quantite": 0.020715474209650583,
-      "prix_actuel_cad": 118.56,
-      "valeur_actuelle_cad": 2.456,
-      "profit_cad": -0.044,
-      "profit_pourcent": -1.76
+      "prix_actuel_cad": 119.14,
+      "valeur_actuelle_cad": 2.468,
+      "profit_cad": -0.032,
+      "profit_pourcent": -1.28
     },
     {
       "symbole": "XRP/CAD",
       "quantite": 1.6526292734404555,
-      "prix_actuel_cad": 1.49357,
-      "valeur_actuelle_cad": 2.4683,
-      "profit_cad": -0.0317,
-      "profit_pourcent": -1.27
+      "prix_actuel_cad": 1.50869,
+      "valeur_actuelle_cad": 2.4933,
+      "profit_cad": -0.0067,
+      "profit_pourcent": -0.27
     },
     {
       "symbole": "ETH/CAD",
       "quantite": 0.0008527397260273973,
-      "prix_actuel_cad": 2930.37,
-      "valeur_actuelle_cad": 2.4988,
-      "profit_cad": -0.0012,
-      "profit_pourcent": -0.05
+      "prix_actuel_cad": 2933.56,
+      "valeur_actuelle_cad": 2.5016,
+      "profit_cad": 0.0016,
+      "profit_pourcent": 0.06
     }
   ]
 }
