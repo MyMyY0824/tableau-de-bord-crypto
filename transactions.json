@@ -1844,5 +1844,25 @@
     "montant_cad": 2.5,
     "frais_cad": 0.01,
     "profit_vente_cad": null
+  },
+  {
+    "date_utc": "2026-11-13T23:20:54.631754+00:00",
+    "symbole": "XDC/CAD",
+    "signal": "VENDRE",
+    "action": "VENTE FICTIVE",
+    "prix_cad": 0.04119,
+    "montant_cad": 2.455597,
+    "frais_cad": 0.009862,
+    "profit_vente_cad": -0.0444
+  },
+  {
+    "date_utc": "2026-11-13T23:20:55.000504+00:00",
+    "symbole": "PEPE/CAD",
+    "signal": "VENDRE",
+    "action": "VENTE FICTIVE",
+    "prix_cad": 6.38e-06,
+    "montant_cad": 2.395195,
+    "frais_cad": 0.009619,
+    "profit_vente_cad": -0.1048
   }
 ]
