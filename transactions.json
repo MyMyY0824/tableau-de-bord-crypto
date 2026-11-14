@@ -1864,5 +1864,15 @@
     "montant_cad": 2.395195,
     "frais_cad": 0.009619,
     "profit_vente_cad": -0.1048
+  },
+  {
+    "date_utc": "2026-11-14T06:46:46.986704+00:00",
+    "symbole": "XDG/CAD",
+    "signal": "VENDRE",
+    "action": "VENTE FICTIVE",
+    "prix_cad": 0.0903808,
+    "montant_cad": 2.392504,
+    "frais_cad": 0.009608,
+    "profit_vente_cad": -0.1075
   }
 ]
